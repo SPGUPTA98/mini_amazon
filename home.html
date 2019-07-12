@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+<center><p>welcome to the HomePage of the weather app</p></center>
+{% if info%}
+	<center>
+		<p>"Temperature is"</p>
+		<p>{{info['main']['temp_min']}}</p></center>
+{% else %}
+<form action="/" method="POST">
+	<center><input type="text" name="city" placeholder="enter city here....">
+	<p>kelvin:</p><input type="radio" name="units" value="kelvin">
+	<p>metric:</p><input type="radio" name="units" value="metric">
+	<p>imperial:</p><input type="radio" name="units" value="imperial">
+	<p><input type="submit" value="Give me the weather!"></p></center>
+</form>
+{% endif %}
+</body>
+</html>
